@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mots Cachés – La Vie Chrétienne</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Écran d'accueil / SplashScreen -->
+  <div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+      <div class="cross-icon">✝</div>
+      <h1>Mots Cachés</h1>
+      <h2>La Vie Chrétienne selon les Écritures</h2>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <!-- En-tête -->
+    <header class="app-header">
+      <div class="header-titles">
+        <h1>Mots Cachés – La Vie Chrétienne</h1>
+        <p id="appSlogan">Parcours chronologique des Évangiles à l'Apocalypse</p>
+      </div>
+
+      <div class="header-controls">
+        <select id="langSelect" class="styled-select">
+          <option value="fr" selected>Français</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+        <button id="muteBtn" class="icon-btn">🔊 Mute</button>
+        <button id="nightModeBtn" class="icon-btn">🌙 Mode Nuit</button>
+      </div>
+    </header>
+
+    <!-- Panneau d'informations du niveau -->
+    <section class="info-bar">
+      <div class="info-card">
+        <span class="label" id="levelLabel">Niveau:</span>
+        <span class="value" id="levelDisplay">1 / 15</span>
+      </div>
+      <div class="info-card">
+        <span class="label" id="foundLabel">Trouvés:</span>
+        <span class="value" id="foundDisplay">0 / 8</span>
+      </div>
+      <div class="info-card">
+        <span class="label" id="timerLabel">Temps:</span>
+        <span class="value" id="timerDisplay">00:00</span>
+      </div>
+    </section>
+
+    <!-- Zone principale : Grille & Liste des mots -->
+    <main class="game-area">
+      <div class="grid-section">
+        <h2 id="levelTitle" class="level-title">Niveau 1 : La Condition Humaine & la Promesse</h2>
+        <div id="wordGrid" class="word-grid"></div>
+      </div>
+
+      <aside class="words-section">
+        <h3 id="wordsToFindTitle">Mots à trouver :</h3>
+        <div id="wordList" class="word-list"></div>
+      </aside>
+    </main>
+
+    <!-- Barre d'actions & Navigation -->
+    <footer class="controls-bar">
+      <button id="prevLevelBtn" class="btn btn-secondary">⏮️ Précédent</button>
+      <button id="restartLevelBtn" class="btn btn-secondary">🔄 Recommencer</button>
+      <button id="hintBtn" class="btn btn-accent">💡 Indice (-10s)</button>
+      <button id="shareBtn" class="btn btn-secondary">🔗 Partager</button>
+      <button id="nextLevelBtn" class="btn btn-primary">Suivant ⏭️</button>
+    </footer>
+
+    <!-- Personnalisation d'arrière-plan -->
+    <details class="customization-panel">
+      <summary>⚙️ Personnaliser l'apparence</summary>
+      <div class="sliders-group">
+        <label>Rouge: <input type="range" id="bgRed" min="0" max="255" value="245"></label>
+        <label>Vert: <input type="range" id="bgGreen" min="0" max="255" value="247"></label>
+        <label>Bleu: <input type="range" id="bgBlue" min="0" max="255" value="250"></label>
+        <label>Opacité des cartes: <input type="range" id="boxOpacity" min="0.2" max="1" step="0.05" value="0.95"></label>
+      </div>
+    </details>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
